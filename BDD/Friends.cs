@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BDD
 {
-    class Friends
+    public class Friends
     {
         public string Name { get; set; }
         public string Familia { get; set; }
