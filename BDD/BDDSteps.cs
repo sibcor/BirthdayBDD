@@ -7,6 +7,7 @@ namespace BDD
     [Binding]
     public class BDDSteps
     {
+        Friends friends { get; set; }
         BirthdaySoftware birthdaySoftware { get; set; }
         [Given(@"I have my software Birthday")]
         public void GivenIHaveMySoftwareBirthday()
@@ -23,7 +24,7 @@ namespace BDD
         [When(@"I fill all data in form")]
         public void WhenIFillAllDataInForm(Table table)
         {
-            var data = table.CreateInstance<Friends>();
+            friends = table.CreateInstance<Friends>();
         }
         
         [When(@"I press add")]
