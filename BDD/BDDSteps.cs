@@ -7,6 +7,7 @@ namespace BDD
     [Binding]
     public class BDDSteps
     {
+        DateTime DT;
         Friends friends { get; set; }
         BirthdaySoftware birthdaySoftware { get; set; }
         [Given(@"I have my software Birthday")]
@@ -30,7 +31,7 @@ namespace BDD
         [When(@"I press add")]
         public void WhenIPressAdd()
         {
-            ScenarioContext.Current.Pending();
+            DT = birthdaySoftware.dateBirthday(friends);
         }
         
         [Then(@"I should add birthday my friend")]
