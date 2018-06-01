@@ -8,7 +8,7 @@ namespace BDD
     public class BDDSteps
     {
         Friends friendPetrov;
-        DateTime DT;
+        string familiaFriend;
         Friends friends { get; set; }
         BirthdaySoftware birthdaySoftware { get; set; }
         [Given(@"I have my software Birthday")]
@@ -43,9 +43,9 @@ namespace BDD
         }
         
         [Then(@"the result should be (.*)\.(.*)")]
-        public void ThenTheResultShouldBe_(Decimal p0, int p1)
+        public void ThenTheResultShouldBe_(DateTime dateTime)
         {
-            ScenarioContext.Current.Pending();
+            familiaFriend = birthdaySoftware.dateBirthday(friends);
         }
     }
 }
