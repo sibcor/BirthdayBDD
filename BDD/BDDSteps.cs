@@ -1,5 +1,6 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace BDD
 {
@@ -22,7 +23,7 @@ namespace BDD
         [When(@"I fill all data in form")]
         public void WhenIFillAllDataInForm(Table table)
         {
-            ScenarioContext.Current.Pending();
+            var data = table.CreateInstance<Friends>();
         }
         
         [When(@"I press add")]
