@@ -8,6 +8,8 @@ namespace BDD
 {
     public class BirthdaySoftware
     {
-
+        public string Name { get; set; }
+        public string Familia { get; set; }
+        public DateTime Date { get; set; }
     }
 }
