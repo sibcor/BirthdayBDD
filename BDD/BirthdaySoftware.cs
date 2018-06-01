@@ -9,5 +9,9 @@ namespace BDD
     public class BirthdaySoftware
     {
 
+        public DateTime dateBirthday(Friends friends)
+        {
+            return friends.Date;
+        }
     }
 }
