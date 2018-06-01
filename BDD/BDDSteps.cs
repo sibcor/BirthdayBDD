@@ -11,7 +11,7 @@ namespace BDD
         [Given(@"I have my software Birthday")]
         public void GivenIHaveMySoftwareBirthday()
         {
-            ScenarioContext.Current.Pending();
+            birthdaySoftware = new BirthdaySoftware();
         }
         
         [Given(@"I succesed login in system")]
