@@ -6,6 +6,7 @@ namespace BDD
     [Binding]
     public class BDDSteps
     {
+        BirthdaySoftware birthdaySoftware { get; set; }
         [Given(@"I have my software Birthday")]
         public void GivenIHaveMySoftwareBirthday()
         {
