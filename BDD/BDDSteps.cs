@@ -7,6 +7,7 @@ namespace BDD
     [Binding]
     public class BDDSteps
     {
+        Friends friendPetrov;
         DateTime DT;
         Friends friends { get; set; }
         BirthdaySoftware birthdaySoftware { get; set; }
@@ -31,7 +32,8 @@ namespace BDD
         [When(@"I press add")]
         public void WhenIPressAdd()
         {
-            DT = birthdaySoftware.dateBirthday(friends);
+            friendPetrov = new Friends { Name = "Egor", Familia = "Petrov", Date = new DateTime(2008, 12, 23) };
+            
         }
         
         [Then(@"I should add birthday my friend")]
